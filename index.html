@@ -4,7 +4,7 @@ cat > /mnt/user-data/outputs/mediagent_website.html << 'HTMLEOF'
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MediAgent — AI Health Diagnosis</title>
+<title>MediAgent â€” AI Health Diagnosis</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -783,15 +783,15 @@ footer{
 
   <div class="hero-badge">
     <div class="hero-badge-dot"></div>
-    AI-Powered · Multi-Agent · 120+ Conditions
+    AI-Powered Â· Multi-Agent Â· 120+ Conditions
   </div>
 
   <h1>Describe your symptoms,<br><span>understand your health.</span></h1>
-  <p>MediAgent uses multi-agent AI to triage symptoms, suggest possible diagnoses, and guide you toward the right care — safely and instantly.</p>
+  <p>MediAgent uses multi-agent AI to triage symptoms, suggest possible diagnoses, and guide you toward the right care â€” safely and instantly.</p>
 
   <div class="hero-search">
     <div class="search-box">
-      <textarea id="hero-input" placeholder="Describe your symptoms in plain language... e.g. I have a severe headache, fever of 38.5°C, and stiff neck for the past 6 hours" rows="2"></textarea>
+      <textarea id="hero-input" placeholder="Describe your symptoms in plain language... e.g. I have a severe headache, fever of 38.5Â°C, and stiff neck for the past 6 hours" rows="2"></textarea>
       <button class="search-btn" onclick="startDiagnosis()" id="hero-btn">
         Analyse symptoms
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -874,13 +874,13 @@ footer{
         <div class="quick-check" onclick="fillChat('Am I having a stroke? I have facial drooping and arm weakness')">
           <span>Stroke symptoms</span><span class="quick-check-arrow">?</span>
         </div>
-        <div class="quick-check" onclick="fillChat('Signs of a heart attack — chest pressure and jaw pain')">
+        <div class="quick-check" onclick="fillChat('Signs of a heart attack â€” chest pressure and jaw pain')">
           <span>Heart attack signs</span><span class="quick-check-arrow">?</span>
         </div>
         <div class="quick-check" onclick="fillChat('I think I have COVID-19 symptoms')">
           <span>COVID-19</span><span class="quick-check-arrow">?</span>
         </div>
-        <div class="quick-check" onclick="fillChat('My child has a high fever of 40°C')">
+        <div class="quick-check" onclick="fillChat('My child has a high fever of 40Â°C')">
           <span>Child high fever</span><span class="quick-check-arrow">?</span>
         </div>
         <div class="quick-check" onclick="fillChat('I have signs of an allergic reaction with hives')">
@@ -901,7 +901,7 @@ footer{
           <div class="agent-avatar">M</div>
           <div>
             <div class="agent-name">MediAgent AI</div>
-            <div class="agent-status"><div class="status-dot"></div> Online · Gemini 2.0 Flash</div>
+            <div class="agent-status"><div class="status-dot"></div> Online Â· Gemini 2.0 Flash</div>
           </div>
         </div>
         <div class="chat-controls">
@@ -916,15 +916,15 @@ footer{
           <div class="msg-avatar ai">M</div>
           <div class="msg-content">
             <div class="msg-bubble">
-              Hello! I'm MediAgent, your AI health assistant. I use a multi-agent system — triage, symptom analysis, drug checking, and report generation — to help you understand your symptoms.<br><br>
+              Hello! I'm MediAgent, your AI health assistant. I use a multi-agent system â€” triage, symptom analysis, drug checking, and report generation â€” to help you understand your symptoms.<br><br>
               <strong>How to get the best results:</strong><br>
-              • Describe your symptoms in detail<br>
-              • Include duration, severity (1–10), and location<br>
-              • Mention any medications you take<br>
-              • Share relevant medical history<br><br>
+              â€¢ Describe your symptoms in detail<br>
+              â€¢ Include duration, severity (1â€“10), and location<br>
+              â€¢ Mention any medications you take<br>
+              â€¢ Share relevant medical history<br><br>
               What symptoms are you experiencing today?
             </div>
-            <div class="msg-meta">MediAgent · Just now</div>
+            <div class="msg-meta">MediAgent Â· Just now</div>
           </div>
         </div>
       </div>
@@ -947,7 +947,7 @@ footer{
   <div class="section-header">
     <div class="section-eyebrow">Coverage</div>
     <h2 class="section-title">Diagnose across every specialty</h2>
-    <p class="section-sub">From cardiology to dermatology — our agents are trained across all major medical domains.</p>
+    <p class="section-sub">From cardiology to dermatology â€” our agents are trained across all major medical domains.</p>
   </div>
   <div class="specialties-grid">
     <div class="specialty-card" onclick="fillChat('I have chest pain and palpitations')">
@@ -1067,7 +1067,7 @@ footer{
       <div class="step-number">06</div>
       <div class="step-icon">??</div>
       <div class="step-title">Continuous memory</div>
-      <div class="step-desc">Session state is maintained across turns — your symptoms, medications, and history are remembered throughout the conversation.</div>
+      <div class="step-desc">Session state is maintained across turns â€” your symptoms, medications, and history are remembered throughout the conversation.</div>
     </div>
   </div>
 </section>
@@ -1253,22 +1253,22 @@ function getDemoResponse(msg) {
   const urgency = detectUrgency(msg);
 
   if (urgency === 'CRISIS') {
-    return `I can hear that you're going through something very difficult right now. You are not alone.\n\n**Please reach out immediately:**\n• ???? USA: 988 Suicide & Crisis Lifeline — call or text 988\n• ???? UK: Samaritans — 116 123 (free, 24/7)\n• ?? International: https://www.befrienders.org\n\nIf you are in immediate danger, please call emergency services (911/112/999).\n\n?? Remember: This is informational only. Please consult a healthcare professional.`;
+    return `I can hear that you're going through something very difficult right now. You are not alone.\n\n**Please reach out immediately:**\nâ€¢ ???? USA: 988 Suicide & Crisis Lifeline â€” call or text 988\nâ€¢ ???? UK: Samaritans â€” 116 123 (free, 24/7)\nâ€¢ ?? International: https://www.befrienders.org\n\nIf you are in immediate danger, please call emergency services (911/112/999).\n\n?? Remember: This is informational only. Please consult a healthcare professional.`;
   }
   if (urgency === 'EMERGENCY') {
-    return `?? **This sounds like a potential medical emergency.**\n\n**Call 911 / 112 / 999 immediately.** Do not drive yourself.\n\nThe symptoms you've described — particularly ${extractSymptoms(msg).join(', ')} — may indicate a serious condition requiring immediate medical evaluation.\n\n**While waiting for help:**\n• Stay calm and sit or lie down\n• Do not eat or drink anything\n• Unlock your door so paramedics can enter\n• Stay on the phone with emergency services\n\n?? Remember: This is informational only. Please consult a healthcare professional.`;
+    return `?? **This sounds like a potential medical emergency.**\n\n**Call 911 / 112 / 999 immediately.** Do not drive yourself.\n\nThe symptoms you've described â€” particularly ${extractSymptoms(msg).join(', ')} â€” may indicate a serious condition requiring immediate medical evaluation.\n\n**While waiting for help:**\nâ€¢ Stay calm and sit or lie down\nâ€¢ Do not eat or drink anything\nâ€¢ Unlock your door so paramedics can enter\nâ€¢ Stay on the phone with emergency services\n\n?? Remember: This is informational only. Please consult a healthcare professional.`;
   }
   if (tl.includes('headache') || tl.includes('head pain')) {
-    return `**Headache Assessment**\n\nHeadaches are very common and most are benign. Based on your description, possible causes include:\n\n• **Tension headache** — most common, often from stress or poor posture\n• **Dehydration headache** — especially if you haven't drunk enough water\n• **Migraine** — if accompanied by light sensitivity or nausea\n• **Sinusitis** — if with facial pain or nasal congestion\n\n**Self-care steps:**\n1. Rest in a quiet, dark room\n2. Drink at least 500ml of water\n3. Paracetamol (500–1000mg) or ibuprofen (200–400mg with food) may help\n4. Cold or warm compress on your forehead\n\n**See a doctor if:**\n• Headache is the worst of your life (thunderclap onset)\n• Accompanied by fever, stiff neck, or rash\n• Persists more than 3 days\n• You have vision changes or weakness\n\n?? Remember: This is informational only. Please consult a healthcare professional.`;
+    return `**Headache Assessment**\n\nHeadaches are very common and most are benign. Based on your description, possible causes include:\n\nâ€¢ **Tension headache** â€” most common, often from stress or poor posture\nâ€¢ **Dehydration headache** â€” especially if you haven't drunk enough water\nâ€¢ **Migraine** â€” if accompanied by light sensitivity or nausea\nâ€¢ **Sinusitis** â€” if with facial pain or nasal congestion\n\n**Self-care steps:**\n1. Rest in a quiet, dark room\n2. Drink at least 500ml of water\n3. Paracetamol (500â€“1000mg) or ibuprofen (200â€“400mg with food) may help\n4. Cold or warm compress on your forehead\n\n**See a doctor if:**\nâ€¢ Headache is the worst of your life (thunderclap onset)\nâ€¢ Accompanied by fever, stiff neck, or rash\nâ€¢ Persists more than 3 days\nâ€¢ You have vision changes or weakness\n\n?? Remember: This is informational only. Please consult a healthcare professional.`;
   }
   if (tl.includes('fever') || tl.includes('temperature')) {
-    return `**Fever Assessment**\n\nA fever (temperature above 38°C / 100.4°F) usually indicates your body is fighting an infection.\n\n**Common causes:**\n• Viral infections (flu, COVID-19, common cold)\n• Bacterial infections (UTI, pneumonia, strep throat)\n• Inflammatory conditions\n\n**Self-care:**\n1. Rest and stay well hydrated (water, clear broths)\n2. Paracetamol (500–1000mg every 4–6h) or ibuprofen to reduce fever\n3. Light, breathable clothing\n4. Cool (not cold) compress if uncomfortable\n\n**Seek medical care immediately if:**\n• Fever above 40°C (104°F)\n• Infant under 3 months with any fever\n• Fever with stiff neck or rash\n• Persists more than 3 days despite treatment\n• You have difficulty breathing\n\n?? Remember: This is informational only. Please consult a healthcare professional.`;
+    return `**Fever Assessment**\n\nA fever (temperature above 38Â°C / 100.4Â°F) usually indicates your body is fighting an infection.\n\n**Common causes:**\nâ€¢ Viral infections (flu, COVID-19, common cold)\nâ€¢ Bacterial infections (UTI, pneumonia, strep throat)\nâ€¢ Inflammatory conditions\n\n**Self-care:**\n1. Rest and stay well hydrated (water, clear broths)\n2. Paracetamol (500â€“1000mg every 4â€“6h) or ibuprofen to reduce fever\n3. Light, breathable clothing\n4. Cool (not cold) compress if uncomfortable\n\n**Seek medical care immediately if:**\nâ€¢ Fever above 40Â°C (104Â°F)\nâ€¢ Infant under 3 months with any fever\nâ€¢ Fever with stiff neck or rash\nâ€¢ Persists more than 3 days despite treatment\nâ€¢ You have difficulty breathing\n\n?? Remember: This is informational only. Please consult a healthcare professional.`;
   }
   if (tl.includes('rash') || tl.includes('itching') || tl.includes('skin')) {
-    return `**Skin Rash Assessment**\n\nSkin rashes can have many causes. Based on common presentations:\n\n**Likely possibilities:**\n• **Contact dermatitis** — reaction to soap, detergent, jewellery, or plants\n• **Eczema (atopic dermatitis)** — dry, itchy patches, often with personal/family history\n• **Viral rash** — often associated with fever or recent illness\n• **Hives (urticaria)** — raised, itchy welts, often allergic\n\n**Self-care:**\n1. Avoid scratching (can introduce infection)\n2. Apply a gentle moisturiser or hydrocortisone 1% cream\n3. Cool compress for itch relief\n4. Antihistamine (e.g. cetirizine) for allergic rashes\n5. Avoid known triggers (new products, foods)\n\n**See a doctor if:**\n• Rash spreads rapidly or covers large areas\n• Accompanied by breathing difficulty (anaphylaxis — call 999/911)\n• Signs of infection (warmth, pus, fever)\n• Rash doesn't improve in 1 week\n\n?? Remember: This is informational only. Please consult a healthcare professional.`;
+    return `**Skin Rash Assessment**\n\nSkin rashes can have many causes. Based on common presentations:\n\n**Likely possibilities:**\nâ€¢ **Contact dermatitis** â€” reaction to soap, detergent, jewellery, or plants\nâ€¢ **Eczema (atopic dermatitis)** â€” dry, itchy patches, often with personal/family history\nâ€¢ **Viral rash** â€” often associated with fever or recent illness\nâ€¢ **Hives (urticaria)** â€” raised, itchy welts, often allergic\n\n**Self-care:**\n1. Avoid scratching (can introduce infection)\n2. Apply a gentle moisturiser or hydrocortisone 1% cream\n3. Cool compress for itch relief\n4. Antihistamine (e.g. cetirizine) for allergic rashes\n5. Avoid known triggers (new products, foods)\n\n**See a doctor if:**\nâ€¢ Rash spreads rapidly or covers large areas\nâ€¢ Accompanied by breathing difficulty (anaphylaxis â€” call 999/911)\nâ€¢ Signs of infection (warmth, pus, fever)\nâ€¢ Rash doesn't improve in 1 week\n\n?? Remember: This is informational only. Please consult a healthcare professional.`;
   }
   const symptoms = extractSymptoms(msg);
-  return `**Health Assessment**\n\nThank you for sharing your symptoms. Based on what you've described${symptoms.length?(' ('+symptoms.join(', ')+')'):''}:\n\n**General guidance:**\n• Your symptoms appear to be in the ${urgency} category\n• I recommend monitoring your symptoms over the next 24–48 hours\n• Keep a record of when symptoms started, their severity (1–10), and any changes\n\n**Questions to help me assess better:**\n1. How long have you had these symptoms?\n2. On a scale of 1–10, how severe are they?\n3. Are you taking any medications?\n4. Do you have any chronic conditions (diabetes, hypertension, asthma)?\n\n**General self-care:**\n• Rest and stay hydrated\n• Avoid strenuous activity\n• Monitor for worsening symptoms\n\n**Seek immediate care if symptoms worsen significantly, you have difficulty breathing, or experience chest pain.**\n\n?? Remember: This is informational only. Please consult a healthcare professional.`;
+  return `**Health Assessment**\n\nThank you for sharing your symptoms. Based on what you've described${symptoms.length?(' ('+symptoms.join(', ')+')'):''}:\n\n**General guidance:**\nâ€¢ Your symptoms appear to be in the ${urgency} category\nâ€¢ I recommend monitoring your symptoms over the next 24â€“48 hours\nâ€¢ Keep a record of when symptoms started, their severity (1â€“10), and any changes\n\n**Questions to help me assess better:**\n1. How long have you had these symptoms?\n2. On a scale of 1â€“10, how severe are they?\n3. Are you taking any medications?\n4. Do you have any chronic conditions (diabetes, hypertension, asthma)?\n\n**General self-care:**\nâ€¢ Rest and stay hydrated\nâ€¢ Avoid strenuous activity\nâ€¢ Monitor for worsening symptoms\n\n**Seek immediate care if symptoms worsen significantly, you have difficulty breathing, or experience chest pain.**\n\n?? Remember: This is informational only. Please consult a healthcare professional.`;
 }
 
 function addMessage(role, content, showDiagCard=false, diagData=null) {
@@ -1294,7 +1294,7 @@ function addMessage(role, content, showDiagCard=false, diagData=null) {
     <div class="msg-avatar ${avatarClass}">${avatarContent}</div>
     <div class="msg-content">
       <div class="msg-bubble">${formattedContent}${diagHtml}</div>
-      <div class="msg-meta">MediAgent ${role === 'ai' ? '·' : '·'} ${now}</div>
+      <div class="msg-meta">MediAgent ${role === 'ai' ? 'Â·' : 'Â·'} ${now}</div>
     </div>`;
 
   container.appendChild(div);
