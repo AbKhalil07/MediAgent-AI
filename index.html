@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,66 +19,11 @@ body{font-family:'Inter',sans-serif;background:var(--navy);color:var(--white);mi
 ::-webkit-scrollbar{width:4px}
 ::-webkit-scrollbar-track{background:var(--navy)}
 ::-webkit-scrollbar-thumb{background:var(--teal);border-radius:2px}
-
-/* API KEY SETUP MODAL */
-.api-modal-overlay{
-  position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9999;
-  display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);
-}
-.api-modal{
-  background:#0F2040;border:1px solid var(--border-hover);border-radius:16px;
-  padding:32px;max-width:480px;width:90%;animation:fade-up 0.3s ease both;
-}
-.api-modal h2{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;margin-bottom:8px}
-.api-modal p{font-size:13px;color:var(--slate-light);line-height:1.6;margin-bottom:20px}
-.api-modal a{color:var(--cyan);text-decoration:none}
-.api-input-row{display:flex;gap:10px;margin-bottom:12px}
-.api-key-input{
-  flex:1;background:rgba(255,255,255,0.06);border:1px solid var(--border);
-  border-radius:8px;padding:10px 14px;color:var(--white);
-  font-family:'JetBrains Mono',monospace;font-size:13px;outline:none;
-}
-.api-key-input:focus{border-color:var(--border-hover)}
-.api-key-input::placeholder{color:var(--slate);font-family:'Inter',sans-serif}
-.api-save-btn{
-  background:var(--teal);color:white;border:none;border-radius:8px;
-  padding:10px 20px;font-size:13px;font-weight:500;cursor:pointer;
-  white-space:nowrap;transition:background 0.2s;
-}
-.api-save-btn:hover{background:var(--teal-light)}
-.api-note{font-size:11px;color:var(--slate);line-height:1.5}
-.api-steps{background:rgba(13,115,119,0.1);border:1px solid rgba(13,115,119,0.2);border-radius:8px;padding:12px 16px;margin-bottom:16px}
-.api-steps p{font-size:12px;color:var(--slate-light);margin-bottom:4px}
-.api-steps ol{font-size:12px;color:var(--slate-light);padding-left:16px;line-height:2}
-.api-error{color:#F87171;font-size:12px;margin-top:6px;display:none}
-
-/* API KEY INDICATOR in nav */
-.api-status{
-  display:flex;align-items:center;gap:6px;font-size:12px;cursor:pointer;
-  padding:6px 12px;border-radius:8px;border:1px solid var(--border);
-  transition:all 0.2s;background:none;color:var(--slate-light);
-}
-.api-status:hover{border-color:var(--border-hover);color:var(--white)}
-.api-status-dot{width:6px;height:6px;border-radius:50%;background:#64748B}
-.api-status-dot.connected{background:#22C55E;animation:pulse-green 2s ease-in-out infinite}
-@keyframes pulse-green{0%,100%{opacity:1}50%{opacity:0.4}}
-
-/* EMERGENCY BANNER */
-.emergency-banner{
-  background:linear-gradient(90deg,#7F1D1D,#991B1B);padding:10px 24px;
-  display:flex;align-items:center;justify-content:center;gap:12px;font-size:13px;font-weight:500;
-  position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(239,68,68,0.4);
-}
+.emergency-banner{background:linear-gradient(90deg,#7F1D1D,#991B1B);padding:10px 24px;display:flex;align-items:center;justify-content:center;gap:12px;font-size:13px;font-weight:500;position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(239,68,68,0.4)}
 .emergency-banner .pulse-dot{width:8px;height:8px;background:var(--red);border-radius:50%;animation:pulse-red 1.5s ease-in-out infinite;flex-shrink:0}
 @keyframes pulse-red{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,0.7)}50%{box-shadow:0 0 0 6px rgba(239,68,68,0)}}
 .emergency-banner a{color:#FCA5A5;text-decoration:none;font-weight:600;border-bottom:1px solid rgba(252,165,165,0.4)}
-
-/* NAV */
-nav{
-  display:flex;align-items:center;justify-content:space-between;padding:18px 48px;
-  border-bottom:1px solid var(--border);backdrop-filter:blur(20px);
-  background:rgba(10,22,40,0.9);position:sticky;top:37px;z-index:999;
-}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;border-bottom:1px solid var(--border);backdrop-filter:blur(20px);background:rgba(10,22,40,0.9);position:sticky;top:37px;z-index:999}
 .nav-logo{display:flex;align-items:center;gap:10px;font-family:'Syne',sans-serif;font-weight:700;font-size:20px;text-decoration:none;color:var(--white)}
 .logo-icon{width:32px;height:32px;background:var(--teal);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px}
 .nav-links{display:flex;gap:8px;align-items:center}
@@ -87,10 +31,11 @@ nav{
 .nav-link:hover{color:var(--white);background:var(--surface)}
 .nav-cta{background:var(--teal);color:var(--white);padding:8px 20px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none;transition:all 0.2s;border:1px solid var(--teal-light)}
 .nav-cta:hover{background:var(--teal-light);transform:translateY(-1px)}
-
-/* HERO */
+.ai-connected-badge{display:flex;align-items:center;gap:6px;font-size:12px;padding:6px 12px;border-radius:8px;border:1px solid rgba(34,197,94,0.3);background:rgba(34,197,94,0.08);color:#4ADE80}
+.ai-dot{width:6px;height:6px;border-radius:50%;background:#22C55E;animation:pulse-green 2s ease-in-out infinite}
+@keyframes pulse-green{0%,100%{opacity:1}50%{opacity:0.4}}
 .hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px 24px 60px;position:relative;overflow:hidden;text-align:center}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%, rgba(13,115,119,0.18) 0%, transparent 70%);pointer-events:none}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(13,115,119,0.18) 0%,transparent 70%);pointer-events:none}
 .heartbeat-container{position:absolute;bottom:0;left:0;right:0;height:120px;overflow:hidden;opacity:0.3;pointer-events:none}
 .heartbeat-svg{width:100%;height:100%}
 .heartbeat-line{fill:none;stroke:var(--cyan);stroke-width:1.5;stroke-dasharray:2000;stroke-dashoffset:2000;animation:draw-line 3s ease forwards,pulse-line 3s 3s ease-in-out infinite}
@@ -113,15 +58,11 @@ nav{
 .hero-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px}
 .hero-tag{background:var(--surface);border:1px solid var(--border);color:var(--slate-light);padding:6px 14px;border-radius:100px;font-size:12px;cursor:pointer;transition:all 0.2s}
 .hero-tag:hover{border-color:var(--border-hover);color:var(--cyan);background:rgba(20,255,236,0.05)}
-
-/* STATS */
 .stats{display:flex;justify-content:center;gap:48px;padding:48px 24px;border-bottom:1px solid var(--border);flex-wrap:wrap}
 .stat{text-align:center}
 .stat-number{font-family:'Syne',sans-serif;font-size:36px;font-weight:700;color:var(--white);line-height:1}
 .stat-number span{color:var(--cyan)}
 .stat-label{font-size:13px;color:var(--slate);margin-top:4px}
-
-/* MAIN LAYOUT */
 .main-layout{max-width:1280px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:280px 1fr;gap:32px}
 .sidebar{display:flex;flex-direction:column;gap:16px}
 .sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px}
@@ -136,8 +77,6 @@ nav{
 .quick-check:last-child{border-bottom:none}
 .quick-check:hover{color:var(--white)}
 .quick-check-arrow{color:var(--teal);font-size:16px}
-
-/* CHAT */
 .chat-area{display:flex;flex-direction:column;gap:20px}
 .chat-container{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;min-height:520px;display:flex;flex-direction:column}
 .chat-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
@@ -162,8 +101,6 @@ nav{
 .message.user .msg-bubble{background:var(--teal);color:white;border-radius:12px 4px 12px 12px}
 .msg-meta{font-size:11px;color:var(--slate);margin-top:5px;padding:0 4px}
 .message.user .msg-meta{text-align:right}
-
-/* DIAGNOSIS CARD */
 .diag-card{background:rgba(13,115,119,0.08);border:1px solid rgba(13,115,119,0.25);border-radius:10px;padding:14px 16px;margin-top:10px}
 .diag-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
 .diag-title{font-size:13px;font-weight:600;color:var(--cyan)}
@@ -188,15 +125,11 @@ nav{
 .action-primary:hover{background:var(--teal-light)}
 .action-secondary{background:none;color:var(--slate-light);border:1px solid var(--border)}
 .action-secondary:hover{border-color:var(--border-hover);color:var(--white)}
-
-/* TYPING */
 .typing-indicator{display:flex;align-items:center;gap:5px;padding:12px 16px;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:4px 12px 12px 12px;width:fit-content}
 .typing-dot{width:6px;height:6px;background:var(--slate-light);border-radius:50%;animation:typing 1.4s ease-in-out infinite}
 .typing-dot:nth-child(2){animation-delay:0.2s}
 .typing-dot:nth-child(3){animation-delay:0.4s}
 @keyframes typing{0%,60%,100%{transform:translateY(0);opacity:0.4}30%{transform:translateY(-4px);opacity:1}}
-
-/* CHAT INPUT */
 .chat-input-area{padding:16px 20px;border-top:1px solid var(--border);display:flex;gap:12px;align-items:flex-end;background:rgba(0,0,0,0.2)}
 .chat-input{flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:10px 14px;color:var(--white);font-family:'Inter',sans-serif;font-size:14px;resize:none;outline:none;min-height:42px;max-height:120px;transition:border-color 0.2s}
 .chat-input:focus{border-color:var(--border-hover)}
@@ -204,12 +137,8 @@ nav{
 .send-btn{background:var(--teal);color:white;border:none;border-radius:10px;width:42px;height:42px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;flex-shrink:0}
 .send-btn:hover{background:var(--teal-light);transform:translateY(-1px)}
 .send-btn:disabled{opacity:0.4;pointer-events:none}
-
-/* STREAM OUTPUT */
 .streaming-cursor{display:inline-block;width:2px;height:14px;background:var(--cyan);margin-left:2px;vertical-align:middle;animation:blink-cursor 0.8s ease-in-out infinite}
 @keyframes blink-cursor{0%,50%{opacity:1}51%,100%{opacity:0}}
-
-/* SPECIALTIES */
 .specialties{max-width:1280px;margin:0 auto;padding:64px 24px;border-top:1px solid var(--border)}
 .section-header{text-align:center;margin-bottom:48px}
 .section-eyebrow{font-size:12px;font-weight:600;color:var(--teal-light);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px}
@@ -224,8 +153,6 @@ nav{
 .specialty-name{font-family:'Syne',sans-serif;font-size:16px;font-weight:600;margin-bottom:6px}
 .specialty-desc{font-size:13px;color:var(--slate-light);line-height:1.5}
 .specialty-count{font-size:11px;color:var(--teal-light);margin-top:12px;font-family:'JetBrains Mono',monospace}
-
-/* HOW IT WORKS */
 .how-it-works{max-width:1280px;margin:0 auto;padding:64px 24px;border-top:1px solid var(--border)}
 .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:48px}
 .step-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px;position:relative}
@@ -233,14 +160,10 @@ nav{
 .step-icon{width:44px;height:44px;background:rgba(13,115,119,0.2);border:1px solid rgba(13,115,119,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
 .step-title{font-family:'Syne',sans-serif;font-size:17px;font-weight:600;margin-bottom:8px}
 .step-desc{font-size:13px;color:var(--slate-light);line-height:1.6}
-
-/* DISCLAIMER */
 .disclaimer{background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);border-radius:14px;padding:24px 28px;margin:0 24px 48px;max-width:1232px;margin-left:auto;margin-right:auto;display:flex;gap:16px;align-items:flex-start}
 .disclaimer-icon{font-size:20px;flex-shrink:0;margin-top:2px}
 .disclaimer-text{font-size:13px;line-height:1.6;color:var(--slate-light)}
 .disclaimer-text strong{color:var(--white)}
-
-/* FOOTER */
 footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}
 .footer-brand{font-family:'Syne',sans-serif;font-weight:700;font-size:18px}
 .footer-brand span{color:var(--cyan)}
@@ -248,64 +171,28 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
 .footer-link{font-size:13px;color:var(--slate);text-decoration:none;transition:color 0.2s}
 .footer-link:hover{color:var(--white)}
 .footer-note{font-size:12px;color:var(--slate);font-family:'JetBrains Mono',monospace}
-
-/* RESPONSIVE */
 @media(max-width:900px){.main-layout{grid-template-columns:1fr}.sidebar{display:none}nav{padding:14px 20px}.nav-links{display:none}footer{padding:32px 20px;flex-direction:column;align-items:flex-start}}
 @media(max-width:600px){.hero h1{font-size:36px}.hero p{font-size:16px}.stats{gap:32px}.diag-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════
-     API KEY SETUP MODAL
-═══════════════════════════════════════════════ -->
-<div class="api-modal-overlay" id="api-modal">
-  <div class="api-modal">
-    <h2>🔑 Connect Gemini AI</h2>
-    <p>MediAgent uses Google Gemini to power real AI responses. Add your free API key to enable live diagnosis — your key is stored only in your browser.</p>
-    <div class="api-steps">
-      <p><strong>Get your free API key in 30 seconds:</strong></p>
-      <ol>
-        <li>Go to <a href="https://aistudio.google.com/app/apikey" target="_blank">aistudio.google.com/app/apikey</a></li>
-        <li>Sign in with Google → click <strong>"Create API key"</strong></li>
-        <li>Copy the key (starts with <code style="color:var(--cyan)">AIza...</code>)</li>
-        <li>Paste it below and click Save</li>
-      </ol>
-    </div>
-    <div class="api-input-row">
-      <input type="password" class="api-key-input" id="api-key-input" placeholder="AIzaSy... (paste your Gemini API key)" />
-      <button class="api-save-btn" onclick="saveApiKey()">Save & Start</button>
-    </div>
-    <div class="api-error" id="api-error">⚠️ Invalid API key — please check and try again</div>
-    <p class="api-note">🔒 Your key is saved in localStorage and never sent to any server except Google's API. You can update it anytime by clicking the 🔑 button in the nav bar.</p>
-  </div>
-</div>
-
-<!-- Emergency Banner -->
 <div class="emergency-banner">
   <div class="pulse-dot"></div>
   <span>Medical emergency? Call <a href="tel:911">911</a> (US) · <a href="tel:112">112</a> (EU) · <a href="tel:999">999</a> (UK) immediately</span>
 </div>
 
-<!-- Nav -->
 <nav>
-  <a class="nav-logo" href="#">
-    <div class="logo-icon">M</div>
-    MediAgent
-  </a>
+  <a class="nav-logo" href="#"><div class="logo-icon">M</div>MediAgent</a>
   <div class="nav-links">
     <a class="nav-link" href="#diagnose">Diagnose</a>
     <a class="nav-link" href="#specialties">Specialties</a>
     <a class="nav-link" href="#how">How it works</a>
-    <button class="api-status" id="api-status-btn" onclick="showApiModal()">
-      <div class="api-status-dot" id="api-status-dot"></div>
-      <span id="api-status-text">Connect AI</span>
-    </button>
+    <div class="ai-connected-badge"><div class="ai-dot"></div><span>Gemini Connected</span></div>
     <a class="nav-cta" href="#diagnose">Start diagnosis</a>
   </div>
 </nav>
 
-<!-- Hero -->
 <section class="hero" id="diagnose">
   <div class="hero-bg"></div>
   <div class="heartbeat-container">
@@ -319,10 +206,7 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
   <div class="hero-search">
     <div class="search-box">
       <textarea id="hero-input" placeholder="Describe your symptoms... e.g. I have a severe headache, fever of 38.5°C, and stiff neck for 6 hours" rows="2"></textarea>
-      <button class="search-btn" onclick="startDiagnosis()">
-        Analyse symptoms
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
+      <button class="search-btn" onclick="startDiagnosis()">Analyse symptoms <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
     </div>
     <div class="hero-tags">
       <div class="hero-tag" onclick="fillExample('I have a headache and fever for 2 days')">Headache + Fever</div>
@@ -335,7 +219,6 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
   </div>
 </section>
 
-<!-- Stats -->
 <div class="stats">
   <div class="stat"><div class="stat-number">120<span>+</span></div><div class="stat-label">Conditions covered</div></div>
   <div class="stat"><div class="stat-number"><span>&lt;</span>3s</div><div class="stat-label">Average response time</div></div>
@@ -343,7 +226,6 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
   <div class="stat"><div class="stat-number">24<span>/7</span></div><div class="stat-label">Always available</div></div>
 </div>
 
-<!-- Main Layout -->
 <div class="main-layout">
   <aside class="sidebar">
     <div class="sidebar-card">
@@ -372,7 +254,6 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
       </div>
     </div>
   </aside>
-
   <div class="chat-area">
     <div class="chat-container">
       <div class="chat-header">
@@ -380,7 +261,7 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
           <div class="agent-avatar">M</div>
           <div>
             <div class="agent-name">MediAgent AI</div>
-            <div class="agent-status"><div class="status-dot"></div> <span id="model-label">Online · Gemini 2.0 Flash</span></div>
+            <div class="agent-status"><div class="status-dot"></div><span>Online · Gemini 2.0 Flash</span></div>
           </div>
         </div>
         <div class="chat-controls">
@@ -388,28 +269,17 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
           <button class="ctrl-btn" onclick="exportChat()">Export</button>
         </div>
       </div>
-
       <div class="chat-messages" id="chat-messages">
         <div class="message ai">
           <div class="msg-avatar ai">M</div>
           <div class="msg-content">
-            <div class="msg-bubble">
-              Hello! I'm <strong>MediAgent</strong>, your AI health assistant powered by Google Gemini. I use a multi-agent pipeline — triage, symptom analysis, drug checking, and report synthesis — to help you understand your symptoms.<br><br>
-              <strong>For best results:</strong><br>
-              ✦ Describe your symptoms in detail<br>
-              ✦ Include duration, severity (1–10), and location<br>
-              ✦ Mention any medications you take<br>
-              ✦ Share relevant medical history<br><br>
-              What are you experiencing today?
-            </div>
+            <div class="msg-bubble">Hello! I'm <strong>MediAgent</strong>, your AI health assistant powered by Google Gemini. I use a multi-agent pipeline — triage, symptom analysis, drug checking, and report synthesis — to help you understand your symptoms.<br><br><strong>For best results:</strong><br>✦ Describe your symptoms in detail<br>✦ Include duration, severity (1–10), and location<br>✦ Mention any medications you take<br>✦ Share relevant medical history<br><br>What are you experiencing today?</div>
             <div class="msg-meta">MediAgent · Just now</div>
           </div>
         </div>
       </div>
-
       <div class="chat-input-area">
-        <textarea class="chat-input" id="chat-input" placeholder="Describe your symptoms here..." rows="1"
-          onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+        <textarea class="chat-input" id="chat-input" placeholder="Describe your symptoms here..." rows="1" onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
         <button class="send-btn" id="send-btn" onclick="sendMessage()">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z"/></svg>
         </button>
@@ -418,7 +288,6 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
   </div>
 </div>
 
-<!-- Specialties -->
 <section class="specialties" id="specialties">
   <div class="section-header">
     <div class="section-eyebrow">Coverage</div>
@@ -441,7 +310,6 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
   </div>
 </section>
 
-<!-- How it Works -->
 <section class="how-it-works" id="how">
   <div class="section-header">
     <div class="section-eyebrow">Process</div>
@@ -477,75 +345,17 @@ footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-i
 
 <script>
 /* ═══════════════════════════════════════════════════════════
-   CONFIGURATION
+   CONFIGURATION — API KEY HARDCODED (no modal needed)
 ═══════════════════════════════════════════════════════════ */
-const MODEL   = 'gemini-2.0-flash';
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:streamGenerateContent?alt=sse&key=`;
+const MODEL      = 'gemini-2.0-flash';
+const GEMINI_KEY = 'AIzaSyAQ.Ab8RN6KMtBTgq8g7WicISccBvN4kEP7NAJILTxkmZBfqHL_ESw';
+const API_URL    = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:streamGenerateContent?alt=sse&key=${GEMINI_KEY}`;
 
 /* ═══════════════════════════════════════════════════════════
    STATE
 ═══════════════════════════════════════════════════════════ */
 let chatHistory = [];
 let isLoading   = false;
-let currentApiKey = '';
-
-/* ═══════════════════════════════════════════════════════════
-   API KEY MANAGEMENT
-═══════════════════════════════════════════════════════════ */
-function loadApiKey() {
-  const saved = localStorage.getItem('mediagent_api_key');
-  if (saved) {
-    currentApiKey = saved;
-    updateApiStatus(true);
-    document.getElementById('api-modal').style.display = 'none';
-  } else {
-    document.getElementById('api-modal').style.display = 'flex';
-  }
-}
-
-async function saveApiKey() {
-  const input = document.getElementById('api-key-input');
-  const key   = input.value.trim();
-  const errEl = document.getElementById('api-error');
-  errEl.style.display = 'none';
-
-  if (!key.startsWith('AIza') || key.length < 30) {
-    errEl.textContent = '⚠️ That doesn\'t look like a valid Gemini API key (should start with AIza...)';
-    errEl.style.display = 'block';
-    return;
-  }
-
-  /* Quick validation — hit the models list endpoint */
-  try {
-    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${key}`);
-    if (!r.ok) throw new Error('invalid');
-    currentApiKey = key;
-    localStorage.setItem('mediagent_api_key', key);
-    updateApiStatus(true);
-    document.getElementById('api-modal').style.display = 'none';
-  } catch {
-    errEl.textContent = '⚠️ API key rejected by Google — please check it and try again.';
-    errEl.style.display = 'block';
-  }
-}
-
-function showApiModal() {
-  document.getElementById('api-key-input').value = currentApiKey;
-  document.getElementById('api-error').style.display = 'none';
-  document.getElementById('api-modal').style.display = 'flex';
-}
-
-function updateApiStatus(connected) {
-  const dot  = document.getElementById('api-status-dot');
-  const text = document.getElementById('api-status-text');
-  if (connected) {
-    dot.classList.add('connected');
-    text.textContent = 'Gemini connected';
-  } else {
-    dot.classList.remove('connected');
-    text.textContent = 'Connect AI';
-  }
-}
 
 /* ═══════════════════════════════════════════════════════════
    CLINICAL HELPERS
@@ -573,8 +383,8 @@ const CRISIS_KW = ['kill myself','suicide','end my life','want to die','dont wan
 
 function detectUrgency(text) {
   const tl = text.toLowerCase();
-  if (CRISIS_KW.some(k => tl.includes(k)))     return 'CRISIS';
-  if (EMERGENCY_KW.some(k => tl.includes(k)))  return 'EMERGENCY';
+  if (CRISIS_KW.some(k => tl.includes(k)))    return 'CRISIS';
+  if (EMERGENCY_KW.some(k => tl.includes(k))) return 'EMERGENCY';
   const symptoms = Object.keys(SYMPTOM_WEIGHTS).filter(k => tl.includes(k));
   const max = symptoms.length > 0 ? Math.max(...symptoms.map(s => SYMPTOM_WEIGHTS[s])) : 0;
   if (max >= 7) return 'URGENT';
@@ -619,66 +429,40 @@ STRICT RULES:
 }
 
 /* ═══════════════════════════════════════════════════════════
-   STREAMING API CALL  ← THIS IS THE KEY FIX
+   STREAMING API CALL
 ═══════════════════════════════════════════════════════════ */
 async function callGeminiStream(userMessage, onChunk, onDone, onError) {
-  if (!currentApiKey) {
-    showApiModal();
-    onError('No API key set.');
-    return;
-  }
-
   const messages = [
     ...chatHistory,
     {role:'user', parts:[{text: userMessage}]}
   ];
-
   const body = {
     contents: messages,
     systemInstruction: { parts:[{text: buildSystemPrompt()}] },
-    generationConfig: {
-      temperature: 0.3,
-      maxOutputTokens: 700,
-      topP: 0.85
-    }
+    generationConfig: { temperature:0.3, maxOutputTokens:700, topP:0.85 }
   };
-
   try {
-    const response = await fetch(API_URL + currentApiKey, {
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
+    const response = await fetch(API_URL, {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
       body: JSON.stringify(body)
     });
-
     if (!response.ok) {
       const errData = await response.json().catch(()=>({}));
       const msg = errData?.error?.message || `HTTP ${response.status}`;
-      if (response.status === 400 || response.status === 403) {
-        localStorage.removeItem('mediagent_api_key');
-        currentApiKey = '';
-        updateApiStatus(false);
-        onError('API key is invalid or expired. Please re-enter your key.');
-        showApiModal();
-      } else {
-        onError(`Gemini API error: ${msg}`);
-      }
+      onError(`Gemini API error: ${msg}`);
       return;
     }
-
-    /* Stream SSE response */
     const reader  = response.body.getReader();
     const decoder = new TextDecoder();
     let fullText  = '';
     let buffer    = '';
-
     while (true) {
       const {done, value} = await reader.read();
       if (done) break;
-
       buffer += decoder.decode(value, {stream:true});
       const lines = buffer.split('\n');
-      buffer = lines.pop(); /* keep incomplete line */
-
+      buffer = lines.pop();
       for (const line of lines) {
         if (!line.startsWith('data: ')) continue;
         const jsonStr = line.slice(6).trim();
@@ -686,14 +470,10 @@ async function callGeminiStream(userMessage, onChunk, onDone, onError) {
         try {
           const parsed = JSON.parse(jsonStr);
           const chunk  = parsed?.candidates?.[0]?.content?.parts?.[0]?.text || '';
-          if (chunk) {
-            fullText += chunk;
-            onChunk(fullText);
-          }
-        } catch { /* skip malformed JSON chunks */ }
+          if (chunk) { fullText += chunk; onChunk(fullText); }
+        } catch {}
       }
     }
-
     onDone(fullText);
   } catch(err) {
     onError(`Connection error: ${err.message}. Check your internet connection.`);
@@ -704,17 +484,17 @@ async function callGeminiStream(userMessage, onChunk, onDone, onError) {
    DIAGNOSIS CARD
 ═══════════════════════════════════════════════════════════ */
 const DIFFERENTIALS = {
-  'chest pain':    [{d:'Musculoskeletal pain',l:'Very common'},{d:'GERD / Reflux',l:'Common'},{d:'Anxiety / Panic',l:'Common'},{d:'Angina / ACS',l:'⚠️ Must exclude'}],
-  'headache':      [{d:'Tension headache',l:'Very common'},{d:'Migraine',l:'Common'},{d:'Dehydration headache',l:'Common'},{d:'Hypertensive headache',l:'Moderate'}],
-  'fever':         [{d:'Viral infection (URTI/flu)',l:'Very common'},{d:'COVID-19',l:'Common'},{d:'UTI / Bacterial infection',l:'Moderate'},{d:'Pneumonia',l:'Rule out if SOB'}],
+  'chest pain':   [{d:'Musculoskeletal pain',l:'Very common'},{d:'GERD / Reflux',l:'Common'},{d:'Anxiety / Panic',l:'Common'},{d:'Angina / ACS',l:'⚠️ Must exclude'}],
+  'headache':     [{d:'Tension headache',l:'Very common'},{d:'Migraine',l:'Common'},{d:'Dehydration headache',l:'Common'},{d:'Hypertensive headache',l:'Moderate'}],
+  'fever':        [{d:'Viral infection (URTI/flu)',l:'Very common'},{d:'COVID-19',l:'Common'},{d:'UTI / Bacterial infection',l:'Moderate'},{d:'Pneumonia',l:'Rule out if SOB'}],
   'shortness of breath':[{d:'Anxiety / Panic attack',l:'Common'},{d:'Asthma exacerbation',l:'Common'},{d:'Anaemia',l:'Moderate'},{d:'Pulmonary embolism',l:'⚠️ Must exclude'}],
-  'nausea':        [{d:'Gastritis',l:'Common'},{d:'Food poisoning',l:'Common'},{d:'GERD',l:'Common'},{d:'Appendicitis',l:'Rule out'}],
+  'nausea':       [{d:'Gastritis',l:'Common'},{d:'Food poisoning',l:'Common'},{d:'GERD',l:'Common'},{d:'Appendicitis',l:'Rule out'}],
   'abdominal pain':[{d:'Gastroenteritis',l:'Very common'},{d:'IBS',l:'Common'},{d:'Constipation',l:'Common'},{d:'Appendicitis',l:'⚠️ Must exclude if right-sided'}],
-  'dizziness':     [{d:'Benign paroxysmal positional vertigo',l:'Common'},{d:'Dehydration',l:'Common'},{d:'Vestibular neuritis',l:'Moderate'},{d:'Hypertension',l:'Consider'}],
-  'rash':          [{d:'Contact dermatitis',l:'Very common'},{d:'Eczema',l:'Common'},{d:'Viral exanthem',l:'Moderate'},{d:'Urticaria (hives)',l:'Common'}],
-  'cough':         [{d:'Viral URTI',l:'Very common'},{d:'Asthma',l:'Moderate'},{d:'Post-nasal drip',l:'Common'},{d:'Pneumonia',l:'Rule out if fever/SOB'}],
-  'fatigue':       [{d:'Poor sleep / dehydration',l:'Very common'},{d:'Anaemia',l:'Moderate'},{d:'Hypothyroidism',l:'Moderate'},{d:'Viral illness',l:'Common'}],
-  'palpitations':  [{d:'Anxiety / Stress',l:'Very common'},{d:'Caffeine / stimulants',l:'Common'},{d:'Atrial fibrillation',l:'⚠️ Rule out'},{d:'SVT',l:'Less common'}],
+  'dizziness':    [{d:'BPPV',l:'Common'},{d:'Dehydration',l:'Common'},{d:'Vestibular neuritis',l:'Moderate'},{d:'Hypertension',l:'Consider'}],
+  'rash':         [{d:'Contact dermatitis',l:'Very common'},{d:'Eczema',l:'Common'},{d:'Viral exanthem',l:'Moderate'},{d:'Urticaria (hives)',l:'Common'}],
+  'cough':        [{d:'Viral URTI',l:'Very common'},{d:'Asthma',l:'Moderate'},{d:'Post-nasal drip',l:'Common'},{d:'Pneumonia',l:'Rule out if fever/SOB'}],
+  'fatigue':      [{d:'Poor sleep / dehydration',l:'Very common'},{d:'Anaemia',l:'Moderate'},{d:'Hypothyroidism',l:'Moderate'},{d:'Viral illness',l:'Common'}],
+  'palpitations': [{d:'Anxiety / Stress',l:'Very common'},{d:'Caffeine / stimulants',l:'Common'},{d:'Atrial fibrillation',l:'⚠️ Rule out'},{d:'SVT',l:'Less common'}],
 };
 
 function buildDiagCard(text, symptoms, risk) {
@@ -723,22 +503,15 @@ function buildDiagCard(text, symptoms, risk) {
   const riskClass = risk.level==='HIGH'?'risk-high':risk.level==='MODERATE'?'risk-moderate':'risk-low';
   const mainSym   = symptoms.find(s => DIFFERENTIALS[s]);
   const diffs     = mainSym ? DIFFERENTIALS[mainSym] : [{d:'Further clinical assessment needed',l:'N/A'}];
-
   return `<div class="diag-card">
-    <div class="diag-header">
-      <div class="diag-title">⚕️ Clinical Summary</div>
-      <div class="risk-badge ${riskClass}">Risk: ${risk.level}</div>
-    </div>
+    <div class="diag-header"><div class="diag-title">⚕️ Clinical Summary</div><div class="risk-badge ${riskClass}">Risk: ${risk.level}</div></div>
     <div class="diag-grid">
       <div class="diag-item"><div class="diag-item-label">Urgency</div><div class="diag-item-value">${urgency}</div></div>
       <div class="diag-item"><div class="diag-item-label">Risk Score</div><div class="diag-item-value">${risk.score}/100</div></div>
       <div class="diag-item"><div class="diag-item-label">Symptoms Detected</div><div class="diag-item-value">${symptoms.length>0?symptoms.slice(0,4).join(', '):'Analysing...'}</div></div>
       <div class="diag-item"><div class="diag-item-label">ICD-10 Codes</div><div class="diag-item-value">${icdCodes.length>0?icdCodes.map(c=>`<span class="icd-code">${c}</span>`).join(' '):'Pending'}</div></div>
     </div>
-    <div class="differentials">
-      <div class="diff-title">Differential Diagnoses</div>
-      ${diffs.map(d=>`<div class="diff-item"><div class="diff-name">${d.d}</div><div class="diff-likelihood">${d.l}</div></div>`).join('')}
-    </div>
+    <div class="differentials"><div class="diff-title">Differential Diagnoses</div>${diffs.map(d=>`<div class="diff-item"><div class="diff-name">${d.d}</div><div class="diff-likelihood">${d.l}</div></div>`).join('')}</div>
     <div class="action-buttons">
       <button class="action-btn action-primary" onclick="fillChat('Tell me more about these differential diagnoses and what tests I should get')">Learn more</button>
       <button class="action-btn action-secondary" onclick="fillChat('What medications are safe for my symptoms?')">Drug info</button>
@@ -750,258 +523,106 @@ function buildDiagCard(text, symptoms, risk) {
 /* ═══════════════════════════════════════════════════════════
    CHAT UI
 ═══════════════════════════════════════════════════════════ */
-function getTime() {
-  return new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
-}
-
-function formatMarkdown(text) {
+function getTime(){return new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}
+function formatMarkdown(text){
   return text
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.*?)\*/g, '<em>$1</em>')
-    .replace(/`(.*?)`/g, '<code style="font-family:monospace;background:rgba(255,255,255,0.1);padding:1px 5px;border-radius:3px">$1</code>')
-    .replace(/^#{1,3}\s+(.+)$/gm, '<strong>$1</strong>')
-    .replace(/\n/g, '<br>');
+    .replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g,'<em>$1</em>')
+    .replace(/`(.*?)`/g,'<code style="font-family:monospace;background:rgba(255,255,255,0.1);padding:1px 5px;border-radius:3px">$1</code>')
+    .replace(/^#{1,3}\s+(.+)$/gm,'<strong>$1</strong>')
+    .replace(/\n/g,'<br>');
 }
-
-function addUserMessage(text) {
-  const container = document.getElementById('chat-messages');
-  const div = document.createElement('div');
-  div.className = 'message user';
-  div.innerHTML = `
-    <div class="msg-avatar user-av">👤</div>
-    <div class="msg-content">
-      <div class="msg-bubble">${text.replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>')}</div>
-      <div class="msg-meta">You · ${getTime()}</div>
-    </div>`;
-  container.appendChild(div);
-  container.scrollTop = container.scrollHeight;
-  chatHistory.push({role:'user', parts:[{text}]});
+function addUserMessage(text){
+  const c=document.getElementById('chat-messages');
+  const d=document.createElement('div');d.className='message user';
+  d.innerHTML=`<div class="msg-avatar user-av">👤</div><div class="msg-content"><div class="msg-bubble">${text.replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>')}</div><div class="msg-meta">You · ${getTime()}</div></div>`;
+  c.appendChild(d);c.scrollTop=c.scrollHeight;
+  chatHistory.push({role:'user',parts:[{text}]});
 }
-
-function addTypingIndicator() {
-  const container = document.getElementById('chat-messages');
-  const div = document.createElement('div');
-  div.className = 'message ai';
-  div.id = 'typing-indicator';
-  div.innerHTML = `
-    <div class="msg-avatar ai">M</div>
-    <div class="msg-content">
-      <div class="typing-indicator">
-        <div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>
-      </div>
-    </div>`;
-  container.appendChild(div);
-  container.scrollTop = container.scrollHeight;
+function addTypingIndicator(){
+  const c=document.getElementById('chat-messages');
+  const d=document.createElement('div');d.className='message ai';d.id='typing-indicator';
+  d.innerHTML=`<div class="msg-avatar ai">M</div><div class="msg-content"><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>`;
+  c.appendChild(d);c.scrollTop=c.scrollHeight;
 }
-
-function removeTypingIndicator() {
-  const el = document.getElementById('typing-indicator');
-  if (el) el.remove();
+function removeTypingIndicator(){const el=document.getElementById('typing-indicator');if(el)el.remove()}
+function createStreamingBubble(){
+  const c=document.getElementById('chat-messages');
+  const d=document.createElement('div');d.className='message ai';d.id='streaming-msg';
+  d.innerHTML=`<div class="msg-avatar ai">M</div><div class="msg-content"><div class="msg-bubble" id="streaming-text"><span class="streaming-cursor"></span></div><div class="msg-meta">MediAgent · ${getTime()}</div></div>`;
+  c.appendChild(d);c.scrollTop=c.scrollHeight;
 }
-
-/* Creates the AI bubble that will be updated as text streams in */
-function createStreamingBubble(diagHtml) {
-  const container = document.getElementById('chat-messages');
-  const div = document.createElement('div');
-  div.className = 'message ai';
-  div.id = 'streaming-msg';
-  div.innerHTML = `
-    <div class="msg-avatar ai">M</div>
-    <div class="msg-content">
-      <div class="msg-bubble" id="streaming-text"><span class="streaming-cursor"></span></div>
-      <div class="msg-meta" id="streaming-meta">MediAgent · ${getTime()}</div>
-    </div>`;
-  container.appendChild(div);
-  container.scrollTop = container.scrollHeight;
-  return div;
+function updateStreamingBubble(fullText){
+  const el=document.getElementById('streaming-text');
+  if(el){el.innerHTML=formatMarkdown(fullText)+`<span class="streaming-cursor"></span>`;document.getElementById('chat-messages').scrollTop=9999;}
 }
-
-function updateStreamingBubble(fullText, diagHtml) {
-  const el = document.getElementById('streaming-text');
-  if (el) {
-    el.innerHTML = formatMarkdown(fullText) + `<span class="streaming-cursor"></span>` + (diagHtml||'');
-    const container = document.getElementById('chat-messages');
-    container.scrollTop = container.scrollHeight;
-  }
+function finaliseStreamingBubble(fullText,diagHtml){
+  const el=document.getElementById('streaming-text');
+  if(el){el.innerHTML=formatMarkdown(fullText)+(diagHtml||'');el.id='';}
+  const m=document.getElementById('streaming-msg');if(m)m.id='';
+  chatHistory.push({role:'model',parts:[{text:fullText}]});
 }
-
-function finaliseStreamingBubble(fullText, diagHtml) {
-  const el = document.getElementById('streaming-text');
-  if (el) {
-    el.innerHTML = formatMarkdown(fullText) + (diagHtml||'');
-    el.id = '';
-  }
-  const msgDiv = document.getElementById('streaming-msg');
-  if (msgDiv) msgDiv.id = '';
-  chatHistory.push({role:'model', parts:[{text: fullText}]});
-}
-
-function addErrorMessage(errText) {
-  const container = document.getElementById('chat-messages');
-  const div = document.createElement('div');
-  div.className = 'message ai';
-  div.innerHTML = `
-    <div class="msg-avatar ai">M</div>
-    <div class="msg-content">
-      <div class="msg-bubble" style="border-color:rgba(239,68,68,0.4);background:rgba(239,68,68,0.06)">
-        <strong>⚠️ Error</strong><br>${errText}
-      </div>
-      <div class="msg-meta">MediAgent · ${getTime()}</div>
-    </div>`;
-  container.appendChild(div);
-  container.scrollTop = container.scrollHeight;
+function addErrorMessage(errText){
+  const c=document.getElementById('chat-messages');
+  const d=document.createElement('div');d.className='message ai';
+  d.innerHTML=`<div class="msg-avatar ai">M</div><div class="msg-content"><div class="msg-bubble" style="border-color:rgba(239,68,68,0.4);background:rgba(239,68,68,0.06)"><strong>⚠️ Error</strong><br>${errText}</div><div class="msg-meta">MediAgent · ${getTime()}</div></div>`;
+  c.appendChild(d);c.scrollTop=c.scrollHeight;
 }
 
 /* ═══════════════════════════════════════════════════════════
-   SEND MESSAGE — MAIN FLOW
+   SEND MESSAGE
 ═══════════════════════════════════════════════════════════ */
-async function sendMessage() {
-  if (isLoading) return;
-  if (!currentApiKey) { showApiModal(); return; }
-
-  const input = document.getElementById('chat-input');
-  const msg   = input.value.trim();
-  if (!msg) return;
-
-  input.value = '';
-  input.style.height = 'auto';
-  isLoading = true;
-  document.getElementById('send-btn').disabled = true;
-
-  addUserMessage(msg);
-  addTypingIndicator();
-
-  /* Pre-compute clinical data */
-  const symptoms = extractSymptoms(msg);
-  const risk     = calcRisk(symptoms);
-  const urgency  = detectUrgency(msg);
-  const showCard = symptoms.length > 0 || urgency !== 'ROUTINE';
-  const diagHtml = showCard ? buildDiagCard(msg, symptoms, risk) : '';
-
-  /* Remove typing dots; create streaming bubble */
-  removeTypingIndicator();
-  createStreamingBubble();
-
+async function sendMessage(){
+  if(isLoading)return;
+  const input=document.getElementById('chat-input');
+  const msg=input.value.trim();if(!msg)return;
+  input.value='';input.style.height='auto';
+  isLoading=true;document.getElementById('send-btn').disabled=true;
+  addUserMessage(msg);addTypingIndicator();
+  const symptoms=extractSymptoms(msg);
+  const risk=calcRisk(symptoms);
+  const urgency=detectUrgency(msg);
+  const showCard=symptoms.length>0||urgency!=='ROUTINE';
+  const diagHtml=showCard?buildDiagCard(msg,symptoms,risk):'';
+  removeTypingIndicator();createStreamingBubble();
   await callGeminiStream(
     msg,
-    /* onChunk */ (partial) => {
-      updateStreamingBubble(partial, '');
-    },
-    /* onDone  */ (full) => {
-      finaliseStreamingBubble(full, diagHtml);
-      isLoading = false;
-      document.getElementById('send-btn').disabled = false;
-    },
-    /* onError */ (errMsg) => {
-      removeTypingIndicator();
-      const streamEl = document.getElementById('streaming-msg');
-      if (streamEl) streamEl.remove();
-      addErrorMessage(errMsg);
-      isLoading = false;
-      document.getElementById('send-btn').disabled = false;
-    }
+    (partial)=>{updateStreamingBubble(partial);},
+    (full)=>{finaliseStreamingBubble(full,diagHtml);isLoading=false;document.getElementById('send-btn').disabled=false;},
+    (errMsg)=>{removeTypingIndicator();const s=document.getElementById('streaming-msg');if(s)s.remove();addErrorMessage(errMsg);isLoading=false;document.getElementById('send-btn').disabled=false;}
   );
 }
 
 /* ═══════════════════════════════════════════════════════════
-   UTILITY FUNCTIONS
+   UTILITIES
 ═══════════════════════════════════════════════════════════ */
-function startDiagnosis() {
-  const input = document.getElementById('hero-input');
-  const msg   = input.value.trim();
-  if (!msg) return;
-  document.getElementById('chat-input').value = msg;
-  document.querySelector('.main-layout').scrollIntoView({behavior:'smooth', block:'start'});
-  setTimeout(() => sendMessage(), 500);
-  input.value = '';
+function startDiagnosis(){
+  const input=document.getElementById('hero-input');const msg=input.value.trim();if(!msg)return;
+  document.getElementById('chat-input').value=msg;
+  document.querySelector('.main-layout').scrollIntoView({behavior:'smooth',block:'start'});
+  setTimeout(()=>sendMessage(),500);input.value='';
 }
-
-function fillExample(text) {
-  document.getElementById('hero-input').value = text;
-  document.getElementById('hero-input').focus();
+function fillExample(text){document.getElementById('hero-input').value=text;document.getElementById('hero-input').focus();}
+function fillChat(text){document.getElementById('chat-input').value=text;document.querySelector('.chat-container').scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('chat-input').focus();}
+function selectSystem(btn,system){
+  document.querySelectorAll('.system-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+  const ex={'Cardiovascular':'I have chest pain and palpitations','Respiratory':'I have shortness of breath and wheezing','Neurological':'I have a severe headache with vision changes','Digestive':'I have stomach pain and bloating after meals','Musculoskeletal':'I have joint pain and stiffness in my knees','Dermatological':'I have a rash with redness and itching','Endocrine':'I have increased thirst, frequent urination, and fatigue','Mental Health':'I have been feeling very anxious and having panic attacks','Pediatric':'My child has a fever and is not eating'};
+  if(ex[system]){document.getElementById('chat-input').value=ex[system];document.getElementById('chat-input').focus();}
 }
-
-function fillChat(text) {
-  document.getElementById('chat-input').value = text;
-  document.querySelector('.chat-container').scrollIntoView({behavior:'smooth', block:'start'});
-  document.getElementById('chat-input').focus();
+function clearChat(){
+  chatHistory=[];const c=document.getElementById('chat-messages');c.innerHTML='';
+  const d=document.createElement('div');d.className='message ai';
+  d.innerHTML=`<div class="msg-avatar ai">M</div><div class="msg-content"><div class="msg-bubble">Chat cleared. How can I help with your symptoms today?</div><div class="msg-meta">MediAgent · ${getTime()}</div></div>`;
+  c.appendChild(d);
 }
-
-function selectSystem(btn, system) {
-  document.querySelectorAll('.system-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  const examples = {
-    'Cardiovascular': 'I have chest pain and palpitations',
-    'Respiratory':    'I have shortness of breath and wheezing',
-    'Neurological':   'I have a severe headache with vision changes',
-    'Digestive':      'I have stomach pain and bloating after meals',
-    'Musculoskeletal':'I have joint pain and stiffness in my knees',
-    'Dermatological': 'I have a rash with redness and itching',
-    'Endocrine':      'I have increased thirst, frequent urination, and fatigue',
-    'Mental Health':  'I have been feeling very anxious and having panic attacks',
-    'Pediatric':      'My child has a fever and is not eating'
-  };
-  if (examples[system]) {
-    document.getElementById('chat-input').value = examples[system];
-    document.getElementById('chat-input').focus();
-  }
+function exportChat(){
+  const msgs=document.querySelectorAll('.message');let text='MediAgent Chat Export\n'+new Date().toLocaleString()+'\n\n';
+  msgs.forEach(m=>{const isUser=m.classList.contains('user');const bubble=m.querySelector('.msg-bubble');if(bubble)text+=(isUser?'You: ':'MediAgent: ')+bubble.innerText+'\n\n';});
+  const blob=new Blob([text],{type:'text/plain'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='mediagent-chat.txt';a.click();
 }
-
-function clearChat() {
-  chatHistory = [];
-  const c = document.getElementById('chat-messages');
-  c.innerHTML = '';
-  const div = document.createElement('div');
-  div.className = 'message ai';
-  div.innerHTML = `<div class="msg-avatar ai">M</div><div class="msg-content"><div class="msg-bubble">Chat cleared. How can I help with your symptoms today?</div><div class="msg-meta">MediAgent · ${getTime()}</div></div>`;
-  c.appendChild(div);
-}
-
-function exportChat() {
-  const msgs = document.querySelectorAll('.message');
-  let text = 'MediAgent Chat Export\n' + new Date().toLocaleString() + '\n\n';
-  msgs.forEach(m => {
-    const isUser = m.classList.contains('user');
-    const bubble = m.querySelector('.msg-bubble');
-    if (bubble) text += (isUser ? 'You: ' : 'MediAgent: ') + bubble.innerText + '\n\n';
-  });
-  const blob = new Blob([text], {type:'text/plain'});
-  const a    = document.createElement('a');
-  a.href     = URL.createObjectURL(blob);
-  a.download = 'mediagent-chat.txt';
-  a.click();
-}
-
-function handleKey(e) {
-  if (e.key === 'Enter' && !e.shiftKey) {
-    e.preventDefault();
-    sendMessage();
-  }
-}
-
-function autoResize(el) {
-  el.style.height = 'auto';
-  el.style.height = Math.min(el.scrollHeight, 120) + 'px';
-}
-
-document.getElementById('hero-input').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); startDiagnosis(); }
-});
-
-/* Close modal when clicking overlay */
-document.getElementById('api-modal').addEventListener('click', function(e) {
-  if (e.target === this && currentApiKey) this.style.display = 'none';
-});
-
-/* Enter key in API input */
-document.getElementById('api-key-input').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter') saveApiKey();
-});
-
-/* ═══════════════════════════════════════════════════════════
-   INIT
-═══════════════════════════════════════════════════════════ */
-loadApiKey();
+function handleKey(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMessage();}}
+function autoResize(el){el.style.height='auto';el.style.height=Math.min(el.scrollHeight,120)+'px';}
+document.getElementById('hero-input').addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();startDiagnosis();}});
 </script>
 </body>
 </html>
